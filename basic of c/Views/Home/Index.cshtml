@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<!--single line code in c#-->
+@*<h2>Today date and time is:@DateTime.Now</h2>*@
+
+
+
+<!--short cut for comment:select...>ctrl+k...>ctrl+C-->
+<!--multiple line code in c#-->
+@{
+    <h3>today date is:@DateTime.Now.</h3>
+    <h3>Today year is:@DateTime.Now.Year</h3>
+
+}
+
+<!--code for view source code: ctrl+u-->
+<!--declaring variable-->
+@*@{
+        string name = "Learning not end";
+        var todaystime = DateTime.Now.ToLongDateString();
+    }
+    <h2>channel name is:@name</h2>
+    <h2>todays time:@todaystime</h2>*@
+
+<!--conditional statementg-->
+@*@{
+        var marks = 80;
+        if(marks >=79)
+        {
+            <h3>Grade is A </h3>
+        }
+        else
+        {
+            <h3>grade will be B</h3>
+        }
+
+    }*@
+
+@*@{
+        string fruit = "appleh";
+        switch (fruit)
+        {
+            case "banana":
+                <H2>THIS IS BANANA</H2>
+                break;
+
+                case "mango":
+                <h2>this is mango</h2>
+                break;
+
+                case "apple":
+                <h2>this is apple</h2>
+                break;
+
+                default:
+                <h2>Go to helll</h2>
+                break;
+        }
+
+
+
+
+
+    }*@
+
+
+@*@{
+        for( int i = 1; i < 10; i++ )
+        {
+
+            <h2>@i</h2>
+
+        }
+
+
+    }*@
+
+
+
+@*@{
+        string[] spot = { "Fottball", "cricket", "bollyball", "Tenis" };
+        foreach(var item in spot)
+        {
+            <h2>@item</h2>
+        }
+
+    }*@
+
+
+
+
+@{
+    <h2>@ViewData["Message"]</h2>
+    <h2>@ViewData["currentTime"]</h2>
+
+}
+
+
+<ul>
+    @{
+        foreach (var i in (string[])ViewData["fruitarray"])
+        {
+            <h3>@i</h3>
+        }
+
+    }
+
+</ul>
+<ul>
+    @{
+        foreach (var i in (List<string>)ViewData["sportslist"])
+        {
+            <li>@i</li>
+        }
+
+    }
+
+</ul>
+
+
+@{ 
+    var a = (basic_of_c.Models.Employee)ViewData["Employee"];
+
+
+}
+<p>@a.Empid</p>
+<p>@a.Empname</p>
+<p>@a.Empcorse</p>
