@@ -12,5 +12,7 @@ namespace basic_of_c.Models
         public string Empname { get; set; }
 
         public string Empcorse { get; set; }
+
+        public int newProperty { get; set; }
     }
 }
